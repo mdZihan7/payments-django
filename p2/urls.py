@@ -16,12 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from payments import views as pv
-from product import views as prv
-from review import views as crv
+from django.urls.conf import include, include
+# from payments import views as pv
+# from product import views as prv
+# from product.views import cake
+# from review import views as crv
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('pv', pv.home_page),
-    path('pd', prv.cake),
-    path('cr', crv.customer),
+    
+    path('pay/', include('payments.urls')),
+    path('pdc/', include('product.urls')),
+    path('rvw/', include('review.urls')),
+
+    # path('admin/', admin.site.urls),
+    # path('pv', pv.home_page),
+    # path('pd', cake),
+    # path('cr', crv.customer),
 ]
