@@ -27,7 +27,7 @@ urlpatterns = [
     path('pdc/', include('product.urls')),
     path('rvw/', include('review.urls')),
 
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     # path('pv', pv.home_page),
     # path('pd', cake),
     # path('cr', crv.customer),

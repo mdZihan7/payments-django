@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome</h1>
+    <!-- <h1>Welcome to payment: what kind: {{a}} and bank name: {{b}}</h1> -->
+    
+    <!-- filter -->
+    <!-- <h2>{{a|upper}}</h2>  -->
+
+    <!-- {% if z %}
+    <h1>This is </h1>
+    {% else %}
+    <h1>This is else part</h1>
+    {% endif %} -->
+
+    <!-- forloop.counter means count -->
+    {% for bn in bank %} 
+    {{forloop.counter}} {{bn}} <br> 
+    {% endfor %}
 </body>
 </html>
